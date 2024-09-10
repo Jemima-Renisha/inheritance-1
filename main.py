@@ -4,9 +4,16 @@ class vehicle:
         self.name = name
         self.maxspeed = maxspeed
         self.mileage = mileage
+    def show(self):
+        print("Bus named as",self.name)
+
 #child class
 class bus(vehicle):
-    pass
+    def __init__(self,name,maxspeed,mileage,color):
+        self.color = color
+        vehicle.__init__(self, name, maxspeed, mileage)
 #object creation
-bus1 = bus("school volvo",130,40)
-print("Bus named as:", bus1.name)
+x = bus("school volvo",130,45,"red")
+x.show()
+print("color is",x.color)
+
